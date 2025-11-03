@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1220">
+    <meta name="description" content="Meet the team behind DEXTERITY.IT and explore our mission, values, and partnerships.">
+    <title>DEXTERITY.IT - About</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <a href="/" class="logo-btn">
+                    <span class="logo-text">DEXTERITY.IT</span>
+                </a>
+                <div class="nav-links desktop-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="courses.html" class="nav-link">Courses</a>
+                    <a href="docs.html" class="nav-link">Documentation</a>
+                    <a href="about.html" class="nav-link active">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-controls">
+                    <button class="mode-toggle nav-mode-toggle" type="button" data-theme-toggle aria-pressed="false">☀️ Light mode</button>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                        <span class="menu-icon">☰</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <div class="mobile-nav-links">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="services.html" class="mobile-nav-link">Services</a>
+                <a href="courses.html" class="mobile-nav-link">Courses</a>
+                <a href="docs.html" class="mobile-nav-link">Documentation</a>
+                <a href="about.html" class="mobile-nav-link">About</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+            </div>
+            <button class="mode-toggle mobile-mode-toggle" type="button" data-theme-toggle aria-pressed="false">☀️ Light mode</button>
+        </div>
+    </nav>
+
+    <main id="main">
+        <section class="hero">
+            <div class="hero-bg">
+                <div class="hero-gradient"></div>
+                <div id="particles"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Technology leadership with real-world dexterity</span>
+                </h1>
+                <p class="hero-subtitle">DEXTERITY.IT partners with organizations to modernize infrastructure, orchestrate automation, and empower teams.</p>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="features-grid">
+                <div class="glass-card">
+                    <h3 class="card-title">Founder</h3>
+                    <p class="card-desc mb-3"><strong>Muhannad Ataya</strong> – Principal Consultant & Solution Architect</p>
+                    <p class="card-desc">Two decades integrating cloud, networking, virtualization, and cybersecurity for regulated industries. Focused on outcome-driven execution, knowledge transfer, and building resilient engineering cultures.</p>
+                </div>
+                <div class="glass-card">
+                    <h3 class="card-title">What guides us</h3>
+                    <p class="card-desc mb-3"><strong>Precision.</strong> Every architecture, automation, or workshop is grounded in measurable impact.</p>
+                    <p class="card-desc mb-3"><strong>Velocity.</strong> We unblock transformation with pragmatic roadmaps and clear accountability.</p>
+                    <p class="card-desc"><strong>Enablement.</strong> We leave teams stronger with documentation, runbooks, and tailored training.</p>
+                </div>
+                <div class="glass-card">
+                    <h3 class="card-title">Credentials & Partners</h3>
+                    <p class="card-desc">• AWS, Azure, GCP professional certifications</p>
+                    <p class="card-desc">• Offensive security and blue-team specializations</p>
+                    <p class="card-desc">• Partnerships with hardware vendors and training platforms</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="glass-card">
+                <h3 class="card-title mb-3">Download & Connect</h3>
+                <div class="mt-4">
+                    <a class="btn btn-primary" href="files/cv.pdf">Download CV</a>
+                    <a class="btn btn-secondary" href="files/muhannad-ataya.vcf">Save vCard</a>
+                </div>
+                <div class="mt-4">
+                    <a class="footer-link" href="https://github.com/dexterity-it" target="_blank" rel="noreferrer">GitHub</a>
+                </div>
+                <div class="mt-2">
+                    <a class="footer-link" href="https://www.linkedin.com/in/muhannad-ataya/" target="_blank" rel="noreferrer">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3 class="footer-title gradient-text">DEXTERITY.IT</h3>
+                <p class="footer-copy">© <span id="year"></span> Muhannad Ataya. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="terms.html" class="footer-link">Terms</a>
+                <a href="privacy.html" class="footer-link">Privacy</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+                <a href="mailto:contact@dexterity.it" class="footer-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    contact@dexterity.it
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

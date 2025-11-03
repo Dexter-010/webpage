@@ -1,0 +1,1017 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>CCNA-Configuration </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2683c102-a179-806c-afd7-e60b2423aac6" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1545987796-200677ee1011?ixlib=rb-4.1.0&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon notion-static-icon" src="https://www.notion.so/icons/wrench_blue.svg"/></div><h1 class="page-title">CCNA-Configuration </h1><p class="page-description"></p></header><div class="page-body"><hr id="2683c102-a179-80fe-acba-d30510f33033"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">0) Quick Conventions &amp; Time-Savers</summary><div class="indented"><ul id="2683c102-a179-80e3-89df-ebbea0ca34e1" class="bulleted-list"><li style="list-style-type:disc"><strong>Wildcard mask</strong> = inverse of subnet mask (e.g., /24 → 0.0.0.255).</li></ul><ul id="2683c102-a179-8007-8b93-ec4cf56742d1" class="bulleted-list"><li style="list-style-type:disc"><strong>Range selection</strong>: <code>interface range g1/0/1-24</code></li></ul><ul id="2683c102-a179-8079-b25d-fed4c7f5722e" class="bulleted-list"><li style="list-style-type:disc"><strong>Save</strong>: <code>copy running-config startup-config</code></li></ul><ul id="2683c102-a179-8035-9e03-fd6d4f45300c" class="bulleted-list"><li style="list-style-type:disc"><strong>Erase &amp; reload (lab)</strong>: <code>write erase</code> → <code>reload</code> (confirm)</li></ul><ul id="2683c102-a179-808a-8419-fb45cefc1fef" class="bulleted-list"><li style="list-style-type:disc"><strong>Reset one interface</strong>: <code>default interface g1/0/1</code></li></ul><ul id="2683c102-a179-8048-b1c8-e84741289315" class="bulleted-list"><li style="list-style-type:disc"><strong>Disable DNS lookup</strong>: <code>no ip domain-lookup</code></li></ul><p id="2683c102-a179-808e-a9b9-d168171abe61" class=""><strong>Core verification</strong>:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-80f2-aae9-f3cf9a49beaa" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">show ip interface brief
+show interfaces status
+show vlan brief
+show interfaces trunk
+show running-config
+show cdp neighbors detail
+</code></pre></div></details><hr id="2683c102-a179-801b-ac42-d310161b68c3"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">1) Base Device Hardening &amp; SSH Management Access</summary><div class="indented"><h3 id="2683c102-a179-80d3-bb7f-cf94698191e8" class="">🔹 <strong>1. System Basics</strong></h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-8085-baf6-ceae2c75fff0" class="code code-wrap"><code class="language-Bash" style="white-space:pre-wrap;word-break:break-all">hostname R1
+no ip domain-lookup
+ip domain-name lab.local
+</code></pre><ul id="2683c102-a179-8004-b459-f029a2e16974" class="bulleted-list"><li style="list-style-type:disc"><strong>Hostname</strong>: Identifies the device (<code>R1</code>).</li></ul><ul id="2683c102-a179-80b9-8e22-d7639cc17c34" class="bulleted-list"><li style="list-style-type:disc"><strong>Disable DNS lookup</strong>: Prevents delays when mistyping commands.</li></ul><ul id="2683c102-a179-809b-997e-e73c5b701651" class="bulleted-list"><li style="list-style-type:disc"><strong>Domain name</strong>: Required for SSH key generation (<code>lab.local</code>).</li></ul><hr id="2683c102-a179-8053-9d7d-c4da231f8cfb"/><h3 id="2683c102-a179-8078-8bb8-d36d35687214" class="">🔹 <strong>2. Passwords &amp; Encryption</strong></h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-80af-905c-c5058f5c4dc3" class="code code-wrap"><code class="language-Bash" style="white-space:pre-wrap;word-break:break-all">service password-encryption
+enable secret &lt;STRONG_SECRET&gt;
+username admin secret &lt;STRONG_SECRET&gt;
+</code></pre><ul id="2683c102-a179-807b-abac-e1c7c8705eba" class="bulleted-list"><li style="list-style-type:disc"><strong>Password encryption</strong>: Scrambles plaintext passwords (weak, but better than nothing).</li></ul><ul id="2683c102-a179-80b9-b4ea-e5bc3a1d16db" class="bulleted-list"><li style="list-style-type:disc"><strong>Enable secret</strong>: Secure, encrypted password for privileged EXEC mode.</li></ul><ul id="2683c102-a179-803a-8fd5-c583b45fccaa" class="bulleted-list"><li style="list-style-type:disc"><strong>Local user account</strong>: Creates <code>admin</code> with a secure encrypted password.</li></ul><hr id="2683c102-a179-800f-ac54-f60ac45ead9c"/><h3 id="2683c102-a179-8055-bde4-dc9771c74756" class="">🔹 <strong>3. SSH Security</strong></h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-80ae-953e-d6d10909ed5f" class="code code-wrap"><code class="language-Bash" style="white-space:pre-wrap;word-break:break-all">crypto key generate rsa modulus 2048
+ip ssh version 2
+ip ssh time-out 60
+ip ssh authentication-retries 3
+</code></pre><ul id="2683c102-a179-8005-bb1c-d6890179886f" class="bulleted-list"><li style="list-style-type:disc"><strong>RSA keys</strong>: Needed for SSH encryption (2048 bits = strong).</li></ul><ul id="2683c102-a179-8096-a08c-e9a557baf4aa" class="bulleted-list"><li style="list-style-type:disc"><strong>Force SSH v2</strong>: Ensures only secure SSH sessions.</li></ul><ul id="2683c102-a179-8099-baa5-efe875ddf4e5" class="bulleted-list"><li style="list-style-type:disc"><strong>Timeout</strong>: 60 seconds to authenticate.</li></ul><ul id="2683c102-a179-806a-b4e3-e305efab7851" class="bulleted-list"><li style="list-style-type:disc"><strong>Retries</strong>: Maximum 3 login attempts.</li></ul><hr id="2683c102-a179-8002-9766-c8951edf7d50"/><h3 id="2683c102-a179-802b-ab72-ecc602f7d8dd" class="">🔹 4. Console Line Configuration</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-80ec-b1d8-d4f861d43bd1" class="code code-wrap"><code class="language-Bash" style="white-space:pre-wrap;word-break:break-all">line console 0
+ logging synchronous
+ exec-timeout 10 0
+ password &lt;OPTIONAL&gt;
+ login local
+</code></pre><ul id="2683c102-a179-807f-ba15-eb9386bb7dd2" class="bulleted-list"><li style="list-style-type:disc"><strong>Console</strong>: Configures local (physical) access.</li></ul><ul id="2683c102-a179-8010-9a95-ee99cf80f199" class="bulleted-list"><li style="list-style-type:disc"><strong>Logging synchronous</strong>: Stops logs from interrupting typing.</li></ul><ul id="2683c102-a179-805c-861c-e9678063b781" class="bulleted-list"><li style="list-style-type:disc"><strong>Exec-timeout</strong>: Auto logout after 10 minutes.</li></ul><ul id="2683c102-a179-80ae-a6b8-d8d90d3067d1" class="bulleted-list"><li style="list-style-type:disc"><strong>Login local</strong>: Uses <code>username admin</code> instead of only a password.</li></ul><hr id="2683c102-a179-8076-b62d-ec990de44acc"/><h3 id="2683c102-a179-80a2-be67-ce7e516d41eb" class="">🔹 <strong>5. VTY (Remote Access)</strong></h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-80ed-8a25-ce2dacb096d0" class="code code-wrap"><code class="language-Bash" style="white-space:pre-wrap;word-break:break-all">line vty 0 15
+ transport input ssh
+ exec-timeout 10 0
+ logging synchronous
+ login local
+</code></pre><ul id="2683c102-a179-80c3-9172-f0342eb5b22b" class="bulleted-list"><li style="list-style-type:disc"><strong>VTY lines</strong>: Configure remote access (0–15 = 16 sessions).</li></ul><ul id="2683c102-a179-804d-a3fd-f2cf65e0e616" class="bulleted-list"><li style="list-style-type:disc"><strong>SSH only</strong>: Blocks Telnet.</li></ul><ul id="2683c102-a179-80a9-8200-d614e02a85e3" class="bulleted-list"><li style="list-style-type:disc"><strong>Timeout</strong>: Auto logout after 10 minutes.</li></ul><ul id="2683c102-a179-8010-9147-e9eff30d24ea" class="bulleted-list"><li style="list-style-type:disc"><strong>Local login</strong>: Requires username &amp; password.</li></ul><hr id="2683c102-a179-8001-b326-ef6087357336"/><h3 id="2683c102-a179-807b-a096-d0f2fd6cc1ac" class="">🔹 <strong>6. Banner</strong></h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-8028-b258-fcb299d25f10" class="code code-wrap"><code class="language-Bash" style="white-space:pre-wrap;word-break:break-all">banner motd ^
+  Authorized access only! ^
+</code></pre><ul id="2683c102-a179-809e-8863-dccb93ceb132" class="bulleted-list"><li style="list-style-type:disc"><strong>Message of the Day</strong>: Displays warning before login.</li></ul><ul id="2683c102-a179-80ef-b6dc-d2405ff815fc" class="bulleted-list"><li style="list-style-type:disc">Acts as a <strong>legal security notice</strong>.</li></ul><hr id="2683c102-a179-80c1-b881-eb3f9ea4b19d"/><p id="2683c102-a179-80c8-a091-f5f9ac0d10a9" class=""><strong>Verify</strong>: <code>show ip ssh</code>, <code>show users</code>, <code>show run | section line vty</code></p></div></details><hr id="2683c102-a179-8018-8705-fdfa2bd9663c"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">2) Switch Management (SVI) &amp; L3 Switching</summary><div class="indented"><p id="2683c102-a179-80b2-9c9c-d25180de4512" class="">L2 switch SVI + default gateway</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-80ad-989b-e3b460da2e4c" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">conf t
+ vlan 10
+ name MGMT
+ interface vlan 10
+  ip address 192.168.10.2 255.255.255.0
+  no shutdown
+ ip default-gateway 192.168.10.1
+end
+</code></pre><h3 id="2683c102-a179-8015-ba30-c5f71af6d9c6" class="">Enable L3 switching (Multilayer switch)</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-8025-9654-f8227df4c259" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">conf t
+ ip routing
+ interface vlan 10
+  ip address 192.168.10.1 255.255.255.0
+  no shut
+ interface vlan 20
+  ip address 192.168.20.1 255.255.255.0
+  no shut
+end
+</code></pre><p id="2683c102-a179-8049-8dd5-c87f596272ef" class=""><strong>Verify</strong>: <code>show ip interface brief</code>, <code>show ip route</code>, <code>show sdm prefer</code></p></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">3) VLANs, Access Ports, Trunks, Native &amp; Voice VLAN</summary><div class="indented"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-8061-874d-ee04eb7b8efb" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">conf t
+ vlan 10
+  name USERS
+ vlan 20
+  name VOICE
+ vlan 99
+  name NATIVE
+!
+interface range g1/0/2-24
+ switchport mode access
+ switchport access vlan 10
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface g1/0/1     ! Uplink/trunk example
+ switchport trunk encapsulation dot1q   ! if supported
+ switchport mode trunk
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 10,20,99
+ switchport nonegotiate                 ! disable DTP (if supported)
+!
+interface g1/0/5     ! Access port with voice VLAN
+ switchport mode access
+ switchport access vlan 10
+ switchport voice vlan 20
+ spanning-tree portfast
+end
+</code></pre><p id="2683c102-a179-8049-949b-cacdad5a1a08" class=""><strong>Verify</strong>: <code>show vlan brief</code>, <code>show interfaces trunk</code>, <code>show spanning-tree</code>, <code>show power inline</code> (PoE capable)</p></div></details><hr id="2683c102-a179-80cf-aaff-e04104c9b218"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">4) EtherChannel (Port-Channel)</summary><div class="indented"><p id="2683c102-a179-80a8-9df3-fbe7c0933bcc" class="">LACP (recommended)</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-8009-bf2b-de0a75dde541" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">conf t
+interface range g1/0/1-2
+ channel-group 1 mode active
+!
+interface port-channel 1
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,99
+ switchport trunk native vlan 99
+end</code></pre><h3 id="2683c102-a179-80b0-8b0f-cc086ee7b407" class="">PAgP (legacy)</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-807f-9ab3-d9560cd4314c" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">interface range g1/0/1-2
+ channel-group 1 mode desirable
+</code></pre><p id="2683c102-a179-80eb-8622-d41eabcfb960" class=""><strong>Verify</strong>: <code>show etherchannel summary</code>, <code>show interfaces port-channel 1 switchport</code></p></div></details><hr id="2683c102-a179-80c9-863d-eb7220c62e4d"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">5) Inter‑VLAN Routing</summary><div class="indented"><p id="2683c102-a179-805d-be26-dacc98293a45" class="">A) Router‑on‑a‑Stick</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-805c-a273-d4b0697aacf4" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">! Switch side (trunk to router)
+interface g1/0/1
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,99
+ switchport trunk native vlan 99
+!
+! Router side
+interface g0/0.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+!
+interface g0/0.20
+ encapsulation dot1Q 20
+ ip address 192.168.20.1 255.255.255.0
+!
+interface g0/0.99
+ encapsulation dot1Q 99 native
+ ip address 192.168.99.1 255.255.255.0
+</code></pre><h3 id="2683c102-a179-80be-b408-de89f10256c1" class="">B) L3 Switch SVIs (preferred in campus)</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-80e5-a68b-e20899ddd15b" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">ip routing
+interface vlan 10
+ ip address 192.168.10.1 255.255.255.0
+ no shut
+interface vlan 20
+ ip address 192.168.20.1 255.255.255.0
+ no shut
+</code></pre><p id="2683c102-a179-803e-8876-d38107f98501" class=""><strong>Verify</strong>: <code>show ip route</code>, <code>show arp</code></p><hr id="2683c102-a179-808e-96c7-d5605eeb2a1e"/></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">6) Spanning‑Tree (RAPID‑PVST+)</summary><div class="indented"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-8092-b4c4-fb6bcd7658ca" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">conf t
+ spanning-tree mode rapid-pvst
+!
+! Make this switch root for VLANs 10 &amp; 20
+ spanning-tree vlan 10,20 root primary
+!
+! Edge ports
+interface range g1/0/2-24
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+! Optional protections
+spanning-tree loopguard default
+spanning-tree guard root
+end
+</code></pre><p id="2683c102-a179-80e0-8df9-dc0bf37ea6bf" class=""><strong>Verify</strong>: <code>show spanning-tree</code>, <code>show spanning-tree root</code>, <code>show spanning-tree interface g1/0/5 detail</code></p></div></details><hr id="2683c102-a179-8028-9171-d5bf9178c3ca"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">7) DHCP (Server) &amp; DHCP Relay (Helper)</summary><div class="indented"><p id="2683c102-a179-80a8-b5f4-e3ca5c6a05af" class="">DHCP Server on Router/L3 Switch</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-803b-96a5-edd62aa3e3fe" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">conf t
+service dhcp
+ip dhcp excluded-address 192.168.10.1 192.168.10.20
+ip dhcp excluded-address 192.168.20.1 192.168.20.20
+!
+ip dhcp pool VLAN10
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.1
+ dns-server 8.8.8.8
+ domain-name lab.local
+!
+ip dhcp pool VLAN20
+ network 192.168.20.0 255.255.255.0
+ default-router 192.168.20.1
+ dns-server 8.8.8.8
+ domain-name voice.lab.local
+end
+</code></pre><p id="2683c102-a179-8064-b447-e7e240fb2e44" class="">
+</p><h3 id="2683c102-a179-80c0-b928-e1671c5c63ee" class="">DHCP Relay (client VLANs toward a remote DHCP server)</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-8089-8a01-de7c6ffed3f8" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">interface vlan 10
+ ip helper-address 192.0.2.53
+interface vlan 20
+ ip helper-address 192.0.2.53
+</code></pre><p id="2683c102-a179-80c0-86e4-d78562569f16" class=""><strong>Verify</strong>: <code>show ip dhcp binding</code>, <code>show ip dhcp server statistics</code></p></div></details><hr id="2683c102-a179-8065-bed9-ebb905ed727c"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">8) NAT (PAT/Overload, Static, Dynamic Pool)</summary><div class="indented"><p id="2683c102-a179-801f-be3d-f2414d77f98d" class="">PAT (most common for Internet edge)</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-8023-9236-c6b9bbd97b79" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">conf t
+access-list 1 permit 192.168.10.0 0.0.0.255
+access-list 1 permit 192.168.20.0 0.0.0.255
+!
+interface g0/0          ! WAN/ISP
+ ip address 203.0.113.2 255.255.255.248
+ ip nat outside
+interface g0/1          ! LAN
+ ip address 192.168.10.254 255.255.255.0
+ ip nat inside
+!
+ip nat inside source list 1 interface g0/0 overload
+end
+</code></pre><p id="2683c102-a179-802a-a30f-f5a9a6c57908" class="">Static 1:1 NAT (publish an internal server)</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-80dc-8da8-ce0fd8a84be7" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">conf t
+ip nat inside source static 192.168.10.10 203.0.113.10
+! Ensure inside/outside set on interfaces
+end
+</code></pre><h3 id="2683c102-a179-80b9-b95c-d5dfa022ce15" class="">Dynamic NAT Pool</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-80c3-87cb-d1bac0a402ab" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">conf t
+ip nat pool NETPOOL 203.0.113.100 203.0.113.110 netmask 255.255.255.0
+access-list 10 permit 192.168.10.0 0.0.0.255
+ip nat inside source list 10 pool NETPOOL
+end
+</code></pre><p id="2683c102-a179-805e-acde-c414268aa896" class=""><strong>Verify</strong>: <code>show ip nat translations</code>, <code>show ip nat statistics</code></p></div></details><hr id="2683c102-a179-8068-adb1-e23a9c48b40b"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">9) IPv4/IPv6 Static &amp; Default Routes</summary><div class="indented"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-80bb-a0e0-d8b8072d1a96" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">! Default route
+ip route 0.0.0.0 0.0.0.0 203.0.113.1
+! Static to a network
+ip route 10.20.0.0 255.255.0.0 1 
+ip route 10.20.0.0 255.255.0.0 192.168.10.3 200
+</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-80d3-9d37-e2d6f7b50c9f" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">! IPv6 prep
+iPv6 unicast-routing
+! IPv6 default via next-hop
+iPv6 route ::/0 2001:db8:1::1
+! IPv6 static to a network
+iPv6 route 2001:db8:20::/64 2001:db8:10::2
+! IPv6 static using exit interface + LL next-hop (common)
+interface g0/0
+ ipv6 address 2001:db8:10::1/64
+ ipv6 enable
+!
+ipv6 route 2001:db8:30::/64 g0/0 FE80::2
+</code></pre><p id="2683c102-a179-804e-8d16-fc64252a6b5e" class=""><strong>Verify</strong>: <code>show ip route</code>, <code>show ipv6 route</code></p></div></details><hr id="2683c102-a179-803c-b1d8-f680c9e8a8da"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">10) OSPFv2 (Single Area) for IPv4</summary><div class="indented"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-804b-abfe-c0410f9e20d1" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">conf t
+router ospf 1
+ router-id 1.1.1.1
+ passive-interface default
+ no passive-interface g0/0
+ no passive-interface g0/1
+ network 10.0.0.0 0.0.0.255 area 0
+ default-information originate   ! if a default route exists
+end
+!
+! Or interface-style
+interface g0/0
+ ip ospf 1 area 0
+ ip ospf network point-to-point   ! if needed on p2p links
+</code></pre><p id="2683c102-a179-805a-8d56-c41c13653edf" class=""><strong>Useful tweaks</strong>: <code>ip ospf cost 100</code> (on interface), <code>neighbor</code> not used in broadcast; for NBMA/p2p you may.</p><p id="2683c102-a179-8041-add4-dedefb20b6cb" class=""><strong>Verify</strong>: <code>show ip protocols</code>, <code>show ip ospf neighbor</code>, <code>show ip ospf interface brief</code>, <code>show ip route ospf</code></p></div></details><hr id="2683c102-a179-80e4-9766-e5a949558eb3"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">11) OSPFv3 (IPv6)</summary><div class="indented"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-8082-90bf-d0d75ae908b2" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">conf t
+ipv6 unicast-routing
+ipv6 router ospf 10
+ router-id 2.2.2.2
+!
+interface g0/0
+ ipv6 address 2001:db8:10::1/64
+ ipv6 ospf 10 area 0
+!
+interface g0/1
+ ipv6 address 2001:db8:20::1/64
+ ipv6 ospf 10 area 0
+end
+</code></pre><p id="2683c102-a179-8020-9a4d-e48d32f839a6" class=""><strong>Verify</strong>: <code>show ipv6 ospf neighbor</code>, <code>show ipv6 ospf interface</code>, <code>show ipv6 route ospf</code></p></div></details><hr id="2683c102-a179-801b-be17-c314f13034d9"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">12) ACLs (Standard &amp; Extended) + VTY Lockdown</summary><div class="indented"><h3 id="2683c102-a179-80e0-8ff7-e6b274b44353" class="">Standard (named) – mgmt subnet to VTY only</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-8088-9340-c91cd9321b4e" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">conf t
+ip access-list standard MGMT-VTY-ONLY
+ permit 192.168.10.0 0.0.0.255
+ deny   any log
+!
+line vty 0 15
+ access-class MGMT-VTY-ONLY in
+ transport input ssh
+ login local
+end
+</code></pre><h3 id="2683c102-a179-806b-a9d1-f2d8408f6d57" class="">Extended (named) – permit only HTTP out, block rest</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-8011-ad34-de69b9067668" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">conf t
+ip access-list extended WEB-FILTER
+ permit tcp 192.168.10.0 0.0.0.255 any eq 80
+ deny   ip any any log
+!
+interface g0/1
+ ip access-group WEB-FILTER in
+end
+</code></pre><p id="2683c102-a179-80bf-95d0-cad0388400dd" class=""><strong>Verify</strong>: <code>show access-lists</code>, <code>show ip interface g0/1</code>, <code>show run | section access-list</code></p></div></details><hr id="2683c102-a179-80c8-b05c-faac3fd02376"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">13) First-Hop Redundancy (HSRP)</summary><div class="indented"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-8087-946c-c3cfb5056998" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">! On SW1 (active desired)
+interface vlan 10
+ ip address 192.168.10.2 255.255.255.0
+ standby 10 ip 192.168.10.1
+ standby 10 priority 120
+ standby 10 preempt
+ standby 10 track g1/0/1 20
+!
+! On SW2 (standby)
+interface vlan 10
+ ip address 192.168.10.3 255.255.255.0
+ standby 10 ip 192.168.10.1
+ standby 10 priority 110
+ standby 10 preempt
+</code></pre><p id="2683c102-a179-803e-8fb0-d3b39262dd98" class=""><strong>Verify</strong>: <code>show standby brief</code>, <code>show standby</code>, <code>show track</code></p></div></details><hr id="2683c102-a179-8038-90fa-cd44a8d776b7"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">14) Access Layer Security (Port Security)</summary><div class="indented"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-80bf-b1d3-dbce7461f4ad" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">conf t
+interface g1/0/10
+ switchport mode access
+ switchport access vlan 10
+ switchport port-security
+ switchport port-security maximum 2
+ switchport port-security mac-address sticky
+ switchport port-security violation restrict
+ spanning-tree portfast
+end
+</code></pre><p id="2683c102-a179-8070-8dc5-c6bbe7b422ad" class=""><strong>Verify</strong>: <code>show port-security interface g1/0/10</code>, <code>show mac address-table interface g1/0/10</code></p></div></details><hr id="2683c102-a179-8065-9a46-d32e4f6f0554"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">15) DHCP Snooping &amp; Dynamic ARP Inspection (DAI)</summary><div class="indented"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-80a4-a882-f18acf95b643" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">conf t
+ip dhcp snooping
+ip dhcp snooping vlan 10,20
+!
+! Trust only uplinks to DHCP server/relay
+interface g1/0/1
+ ip dhcp snooping trust
+!
+! Limit rate on access ports
+interface range g1/0/2-24
+ ip dhcp snooping limit rate 10
+end
+</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-8011-b354-ef12ad51f8fe" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">! DAI (requires DHCP snooping database)
+conf t
+ip arp inspection vlan 10,20
+!
+interface g1/0/1   ! uplink
+ ip arp inspection trust
+end
+</code></pre><p id="2683c102-a179-806c-8a67-c02619536f81" class=""><strong>Verify</strong>: <code>show ip dhcp snooping</code>, <code>show ip arp inspection</code></p></div></details><hr id="2683c102-a179-80bf-b621-fac30f624d76"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">16) NTP, Syslog, &amp; Time</summary><div class="indented"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-80b9-a1e4-da52331f7bcf" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">conf t
+service timestamps log datetime msec
+clock timezone EST -5
+clock summer-time EDT recurring
+ntp server 192.0.2.10 prefer
+logging buffered 16384
+logging trap warnings
+logging host 192.0.2.50
+end
+</code></pre><p id="2683c102-a179-8092-b5f0-c8b2310bf5c9" class=""><strong>Verify</strong>: <code>show clock detail</code>, <code>show ntp associations</code>, <code>show logging</code></p></div></details><hr id="2683c102-a179-80ad-913c-c9a1b716fb65"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">17) SNMPv2c (Read-Only Minimal)</summary><div class="indented"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-8081-beef-c6a6cbbeee23" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">conf t
+snmp-server community READ ro
+snmp-server location &quot;Main Closet&quot;
+snmp-server contact &quot;NetOps&quot;
+snmp-server host 192.0.2.60 version 2c READ
+end
+</code></pre><p id="2683c102-a179-80ef-bf8a-d1a790114934" class=""><strong>Verify</strong>: <code>show snmp</code>, <code>show running-config | include snmp</code></p></div></details><hr id="2683c102-a179-8000-9e47-d20d80e3d8e1"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">18) Wireless (Very Brief CLI Touchpoints)</summary><div class="indented"><blockquote id="2683c102-a179-808a-837a-d2f91a89473e" class="">CCNA focuses more on concepts. Typical config is via WLC GUI. On AP-in-Switch labs, ensure trunks &amp; PoE; tag SSIDs to VLANs on the WLC.</blockquote><p id="2683c102-a179-8052-a73c-d79cf4a9645c" class=""><strong>Switch-side for AP uplink</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-8035-8c52-fb88cc077365" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">interface g1/0/24
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,99
+ power inline auto
+</code></pre></div></details><hr id="2683c102-a179-80b6-96ee-c4c646eb5f65"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">19) Common Show/Debug Commands by Topic</summary><div class="indented"><ul id="2683c102-a179-80d9-9d89-e76490fe9d9c" class="bulleted-list"><li style="list-style-type:disc"><strong>Interfaces</strong>: <code>show ip interface brief</code>, <code>show interfaces counters errors</code></li></ul><ul id="2683c102-a179-80af-ac32-cee7d06a3797" class="bulleted-list"><li style="list-style-type:disc"><strong>VLANs/Trunks</strong>: <code>show vlan brief</code>, <code>show interfaces trunk</code>, <code>show dtp interface</code></li></ul><ul id="2683c102-a179-8053-9af7-ea374613081a" class="bulleted-list"><li style="list-style-type:disc"><strong>STP</strong>: <code>show spanning-tree</code>, <code>show spanning-tree root</code>, <code>show spanning-tree interface X detail</code></li></ul><ul id="2683c102-a179-8013-bdf5-e0da51b5f1d4" class="bulleted-list"><li style="list-style-type:disc"><strong>Routing</strong>: <code>show ip route</code>, <code>show ip protocols</code>, <code>show cdp neighbors detail</code>, <code>show lldp neighbors detail</code></li></ul><ul id="2683c102-a179-800d-a406-e893847f7961" class="bulleted-list"><li style="list-style-type:disc"><strong>OSPF</strong>: <code>show ip ospf neighbor</code>, <code>show ip ospf interface brief</code>, <code>show ip route ospf</code></li></ul><ul id="2683c102-a179-806d-913b-d23c3fe65819" class="bulleted-list"><li style="list-style-type:disc"><strong>HSRP</strong>: <code>show standby brief</code>, <code>show standby</code></li></ul><ul id="2683c102-a179-807f-a680-e178cf80f8dc" class="bulleted-list"><li style="list-style-type:disc"><strong>ACL</strong>: <code>show access-lists</code>, <code>show ip interface X</code></li></ul><ul id="2683c102-a179-808e-a34c-c801ccba348c" class="bulleted-list"><li style="list-style-type:disc"><strong>NAT</strong>: <code>show ip nat translations</code>, <code>show ip nat statistics</code></li></ul><ul id="2683c102-a179-8065-aebd-c05257343595" class="bulleted-list"><li style="list-style-type:disc"><strong>DHCP</strong>: <code>show ip dhcp binding</code>, <code>show ip dhcp conflict</code></li></ul><ul id="2683c102-a179-8077-8cbf-c6156b94b5f1" class="bulleted-list"><li style="list-style-type:disc"><strong>Security</strong>: <code>show port-security interface X</code>, <code>show ip dhcp snooping</code></li></ul><ul id="2683c102-a179-802e-95f0-c5ca29bc6a05" class="bulleted-list"><li style="list-style-type:disc"><strong>Mgmt</strong>: <code>show run | section line vty</code>, <code>show ip ssh</code>, <code>show clock</code>, <code>show logging</code></li></ul></div></details><hr id="2683c102-a179-80fb-bf33-f0b7eccc98ef"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">20) Troubleshooting Playbook (Fast)</summary><div class="indented"><ol type="1" id="2683c102-a179-808b-b61d-d268cb57dce2" class="numbered-list" start="1"><li><strong>Layer 1</strong>: <code>show int status</code> (err‑disable? notconnect? speed/duplex?)</li></ol><ol type="1" id="2683c102-a179-8008-9b3f-e8ba7dd496ff" class="numbered-list" start="2"><li><strong>VLAN</strong>: Is the access port on the right VLAN? <code>show vlan brief</code></li></ol><ol type="1" id="2683c102-a179-8048-89d8-da2d5cf00fff" class="numbered-list" start="3"><li><strong>Trunking</strong>: Allowed/native VLANs match? <code>show int trunk</code></li></ol><ol type="1" id="2683c102-a179-80fa-a3fb-fc4a88a58a3c" class="numbered-list" start="4"><li><strong>STP</strong>: Blocked ports? <code>show spanning-tree</code></li></ol><ol type="1" id="2683c102-a179-80c8-9389-e22f6aee4b31" class="numbered-list" start="5"><li><strong>IP</strong>: Address/gateway correct? <code>show ip int brief</code></li></ol><ol type="1" id="2683c102-a179-809d-894a-f3e2f741c7e5" class="numbered-list" start="6"><li><strong>Routing</strong>: Does route exist? <code>show ip route</code> (look for <code>C</code>, <code>S</code>, <code>O</code>)</li></ol><ol type="1" id="2683c102-a179-8076-8fb6-e0f67f59752b" class="numbered-list" start="7"><li><strong>ACL/NAT</strong>: Check for unexpected drops: <code>show access-lists</code> (hit counts), <code>show ip nat stats</code></li></ol><ol type="1" id="2683c102-a179-80e8-8943-db48db7a386d" class="numbered-list" start="8"><li><strong>HSRP</strong>: VIP reachable? Who is Active/Standby? <code>show standby brief</code></li></ol><ol type="1" id="2683c102-a179-8081-b346-dc0514c665c1" class="numbered-list" start="9"><li><strong>DNS/NTP</strong>: Time skew breaks certs/SSH; fix clock &amp; NTP.</li></ol><ol type="1" id="2683c102-a179-8064-8ac2-d0929bfa52ac" class="numbered-list" start="10"><li><strong>Logs</strong>: <code>show logging</code> for clues.</li></ol></div></details><hr id="2683c102-a179-805b-b720-f6b7b7aadc23"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">21) Mini Reference Topologies</summary><div class="indented"><p id="2683c102-a179-80b9-b844-d46ce33ee624" class=""><strong>Campus core/distribution ML switch (SVIs + OSPF)</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-8091-8300-dfbb0df86eb6" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">ip routing
+interface vlan 10
+ ip address 192.168.10.1 255.255.255.0
+interface vlan 20
+ ip address 192.168.20.1 255.255.255.0
+router ospf 1
+ router-id 1.1.1.1
+ passive-interface default
+ no passive-interface vlan10
+ no passive-interface vlan20
+ network 192.168.10.0 0.0.0.255 area 0
+ network 192.168.20.0 0.0.0.255 area 0
+</code></pre><p id="2683c102-a179-8045-b7ac-ee1135c18df1" class=""><strong>Edge router (PAT + default)</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2683c102-a179-801c-8991-ffe932458cde" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">ip route 0.0.0.0 0.0.0.0 203.0.113.1
+access-list 1 permit 192.168.0.0 0.0.255.255
+interface g0/0
+ ip address 203.0.113.2 255.255.255.252
+ ip nat outside
+interface g0/1
+ ip address 192.168.0.1 255.255.0.0
+ ip nat inside
+ip nat inside source list 1 interface g0/0 overload
+</code></pre></div></details><hr id="2683c102-a179-809b-b734-da2ba46434ad"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">22) Exam Gotchas &amp; Best Practices</summary><div class="indented"><ul id="2683c102-a179-8020-9834-de4d86ffefa7" class="bulleted-list"><li style="list-style-type:disc">Trunk encapsulation command may be <strong>absent</strong> on some switches (dot1q only). If so, <strong>omit</strong> it.</li></ul><ul id="2683c102-a179-801f-ac06-c3d83768ba88" class="bulleted-list"><li style="list-style-type:disc">Always match <strong>native VLAN</strong> on both sides; avoid using <strong>VLAN 1</strong> for trunks/native.</li></ul><ul id="2683c102-a179-8048-ba89-c8799b2903c5" class="bulleted-list"><li style="list-style-type:disc">For OSPF <strong>default-information originate</strong>, ensure a default route exists first.</li></ul><ul id="2683c102-a179-80ad-a4f5-ede43b1dac9b" class="bulleted-list"><li style="list-style-type:disc">Use <strong>interface-style OSPF</strong> to avoid wildcard math in timed exams.</li></ul><ul id="2683c102-a179-805c-b518-f8c6e9cd9c43" class="bulleted-list"><li style="list-style-type:disc">On IPv6 statics with a <strong>link‑local</strong> next-hop, include the <strong>exit interface</strong>.</li></ul><ul id="2683c102-a179-8050-8c29-e458d5e10b72" class="bulleted-list"><li style="list-style-type:disc">After enabling <strong>ip routing</strong> on L3 switches, don’t set <code>ip default-gateway</code>; use <code>ip route</code> instead.</li></ul><ul id="2683c102-a179-80a2-83b0-c1298ae193e6" class="bulleted-list"><li style="list-style-type:disc">For <strong>port-security</strong>, don’t forget to set <strong>access mode</strong> + <strong>access VLAN</strong> first.</li></ul><ul id="2683c102-a179-8010-aa9e-dd8dc36e0448" class="bulleted-list"><li style="list-style-type:disc">For <strong>DHCP snooping/DAI</strong>, mark only <strong>uplinks</strong> as trusted.</li></ul><ul id="2683c102-a179-8050-88dd-f9cd8ed4349f" class="bulleted-list"><li style="list-style-type:disc">Save often. Verify with <strong>show</strong> commands after each section.</li></ul></div></details><hr id="2683c102-a179-80f0-a1eb-c8794adc5ace"/><h3 id="2683c102-a179-801f-97b8-ec5454543df7" class=""></h3></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

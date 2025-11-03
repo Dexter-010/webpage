@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1220">
+    <meta name="description" content="DEXTERITY.IT – Specialized technology services across cloud, networking, cybersecurity, automation, and training.">
+    <title>DEXTERITY.IT - Services</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <a href="/" class="logo-btn">
+                    <span class="logo-text">DEXTERITY.IT</span>
+                </a>
+                <div class="nav-links desktop-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="services.html" class="nav-link active">Services</a>
+                    <a href="courses.html" class="nav-link">Courses</a>
+                    <a href="docs.html" class="nav-link">Documentation</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-controls">
+                    <button class="mode-toggle nav-mode-toggle" type="button" data-theme-toggle aria-pressed="false">☀️ Light mode</button>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                        <span class="menu-icon">☰</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <div class="mobile-nav-links">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="services.html" class="mobile-nav-link">Services</a>
+                <a href="courses.html" class="mobile-nav-link">Courses</a>
+                <a href="docs.html" class="mobile-nav-link">Documentation</a>
+                <a href="about.html" class="mobile-nav-link">About</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+            </div>
+            <button class="mode-toggle mobile-mode-toggle" type="button" data-theme-toggle aria-pressed="false">☀️ Light mode</button>
+        </div>
+    </nav>
+
+    <main id="main">
+        <section class="hero">
+            <div class="hero-bg">
+                <div class="hero-gradient"></div>
+                <div id="particles"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Services engineered for your next milestone</span>
+                </h1>
+                <p class="hero-subtitle">Strategy, delivery, and enablement for cloud, networking, cybersecurity, and AI-driven automation.</p>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="features-grid">
+                <div class="glass-card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 12 2 21 11 21 21 3 21 3 11"></polygon><polyline points="9 21 9 12 15 12 15 21"></polyline></svg>
+                    </div>
+                    <h3 class="card-title">Cloud Architecture</h3>
+                    <p class="card-desc">Landing zones, hybrid cloud rollouts, and governance frameworks across Azure, AWS, and GCP.</p>
+                    <button class="btn btn-secondary" onclick="navigateTo('services-detail.html?slug=cloud-architecture')">View details</button>
+                </div>
+                <div class="glass-card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><polyline points="17 2 12 7 7 2"></polyline></svg>
+                    </div>
+                    <h3 class="card-title">Network & Cybersecurity</h3>
+                    <p class="card-desc">Zero-trust strategies, SOC build-outs, SD-WAN design, and compliance-ready security hardening.</p>
+                    <button class="btn btn-secondary" onclick="navigateTo('services-detail.html?slug=network-cybersecurity')">View details</button>
+                </div>
+                <div class="glass-card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+                    </div>
+                    <h3 class="card-title">AI & Automation</h3>
+                    <p class="card-desc">Copilot integrations, RPA workflows, and applied ML experiments with measurable business outcomes.</p>
+                    <button class="btn btn-secondary" onclick="navigateTo('services-detail.html?slug=ai-automation')">View details</button>
+                </div>
+                <div class="glass-card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14"></path><path d="M17 5h2a2 2 0 0 1 2 2v11"></path><path d="M7 5H5a2 2 0 0 0-2 2v11"></path><path d="M17 5c0-1.657-.895-3-2-3H9C7.895 2 7 3.343 7 5v6c0 1.657.895 3 2 3h4c1.105 0 2 1.343 2 3z"></path></svg>
+                    </div>
+                    <h3 class="card-title">Enterprise Training</h3>
+                    <p class="card-desc">Role-based enablement for engineers and executives, delivered virtually or onsite with tailored labs.</p>
+                    <button class="btn btn-secondary" onclick="navigateTo('services-detail.html?slug=enterprise-training')">View details</button>
+                </div>
+                <div class="glass-card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v4H3z"></path><rect x="3" y="9" width="18" height="6"></rect><path d="M3 17h18v4H3z"></path></svg>
+                    </div>
+                    <h3 class="card-title">Managed Operations</h3>
+                    <p class="card-desc">24/7 infrastructure monitoring, incident response, and lifecycle management with clear SLAs.</p>
+                    <button class="btn btn-secondary" onclick="navigateTo('services-detail.html?slug=managed-operations')">View details</button>
+                </div>
+                <div class="glass-card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.732l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.732l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    </div>
+                    <h3 class="card-title">Fractional CTO</h3>
+                    <p class="card-desc">Interim technology leadership, roadmapping, and vendor management to accelerate decision-making.</p>
+                    <button class="btn btn-secondary" onclick="navigateTo('services-detail.html?slug=fractional-cto')">View details</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3 class="footer-title gradient-text">DEXTERITY.IT</h3>
+                <p class="footer-copy">© <span id="year"></span> Muhannad Ataya. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="terms.html" class="footer-link">Terms</a>
+                <a href="privacy.html" class="footer-link">Privacy</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+                <a href="mailto:contact@dexterity.it" class="footer-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    contact@dexterity.it
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

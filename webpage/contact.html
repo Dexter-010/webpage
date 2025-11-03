@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1220">
+    <meta name="description" content="Contact DEXTERITY.IT for technology consulting, training, and advisory services.">
+    <title>DEXTERITY.IT - Contact</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <a href="/" class="logo-btn">
+                    <span class="logo-text">DEXTERITY.IT</span>
+                </a>
+                <div class="nav-links desktop-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="courses.html" class="nav-link">Courses</a>
+                    <a href="docs.html" class="nav-link">Documentation</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </div>
+                <div class="nav-controls">
+                    <button class="mode-toggle nav-mode-toggle" type="button" data-theme-toggle aria-pressed="false">☀️ Light mode</button>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                        <span class="menu-icon">☰</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <div class="mobile-nav-links">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="services.html" class="mobile-nav-link">Services</a>
+                <a href="courses.html" class="mobile-nav-link">Courses</a>
+                <a href="docs.html" class="mobile-nav-link">Documentation</a>
+                <a href="about.html" class="mobile-nav-link">About</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+            </div>
+            <button class="mode-toggle mobile-mode-toggle" type="button" data-theme-toggle aria-pressed="false">☀️ Light mode</button>
+        </div>
+    </nav>
+
+    <main id="main">
+        <section class="features-section">
+            <div class="features-grid">
+                <div class="glass-card">
+                    <h1 class="card-title mb-3">Start the conversation</h1>
+                    <p class="card-desc mb-3">Tell us about your challenge, required timeline, and success metrics. We respond within one business day.</p>
+                    <form id="contact-form" action="https://formspree.io/f/your-id" method="POST" onsubmit="return validateForm('contact-form')">
+                        <label class="card-desc" for="name">Name *</label>
+                        <input id="name" name="name" type="text" class="form-control mb-4" required>
+
+                        <label class="card-desc" for="email">Email *</label>
+                        <input id="email" name="email" type="email" class="form-control mb-4" required>
+
+                        <label class="card-desc" for="service">Service area</label>
+                        <select id="service" name="service" class="form-control mb-4">
+                            <option value="Cloud Architecture">Cloud Architecture</option>
+                            <option value="Cybersecurity">Cybersecurity</option>
+                            <option value="AI & Automation">AI & Automation</option>
+                            <option value="Training">Training</option>
+                            <option value="Advisory">Advisory</option>
+                        </select>
+
+                        <label class="card-desc" for="message">Project details *</label>
+                        <textarea id="message" name="message" rows="5" class="form-control mb-4" required></textarea>
+
+                        <button class="btn btn-primary" type="submit">Submit enquiry</button>
+                    </form>
+                </div>
+                <div class="glass-card">
+                    <h2 class="card-title mb-3">Connect directly</h2>
+                    <p class="card-desc mb-2"><strong>Email:</strong> <a class="footer-link" href="mailto:contact@dexterity.it">contact@dexterity.it</a></p>
+                    <p class="card-desc mb-2"><strong>Phone:</strong> +1 (514) 555-0129</p>
+                    <p class="card-desc mb-3"><strong>Office:</strong> Montréal, QC • Serving clients across North America and EMEA.</p>
+                    <p class="card-desc mb-3">Need quick support? Book a 30-minute call to discuss scope, readiness, and next steps.</p>
+                    <button class="btn btn-secondary" onclick="window.open('https://cal.com/', '_blank')">Schedule a call</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3 class="footer-title gradient-text">DEXTERITY.IT</h3>
+                <p class="footer-copy">© <span id="year"></span> Muhannad Ataya. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="terms.html" class="footer-link">Terms</a>
+                <a href="privacy.html" class="footer-link">Privacy</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+                <a href="mailto:contact@dexterity.it" class="footer-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    contact@dexterity.it
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
