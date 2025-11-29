@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1220">
+    <meta name="description" content="Courses — Learn IT, Networking & Security at DEXTERITY.IT. Hands-on labs across networking, operating systems, and cybersecurity.">
+    <title>Courses — Learn IT, Networking & Security | DEXTERITY.IT</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <a href="/" class="logo-btn">
+                    <span class="logo-text">DEXTERITY.IT</span>
+                </a>
+                <div class="nav-links desktop-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="courses.html" class="nav-link active">Courses</a>
+                    <a href="docs.html" class="nav-link">Documentation</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-controls">
+                    <button class="mode-toggle nav-mode-toggle" type="button" data-theme-toggle aria-pressed="false">☀️ Light mode</button>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                        <span class="menu-icon">☰</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <div class="mobile-nav-links">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="services.html" class="mobile-nav-link">Services</a>
+                <a href="courses.html" class="mobile-nav-link">Courses</a>
+                <a href="docs.html" class="mobile-nav-link">Documentation</a>
+                <a href="about.html" class="mobile-nav-link">About</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+            </div>
+            <button class="mode-toggle mobile-mode-toggle" type="button" data-theme-toggle aria-pressed="false">☀️ Light mode</button>
+        </div>
+    </nav>
+
+    <main id="main">
+        <section class="hero course-hero">
+            <div class="hero-bg">
+                <div class="hero-gradient"></div>
+                <div id="particles"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Courses — Learn IT, Networking &amp; Security</span>
+                </h1>
+                <p class="hero-subtitle">Build an end-to-end skill stack covering networks, operating systems, cloud platforms, security, and home lab automation. Every course includes guided modules, labs, and documentation mapped to Dexterity.it workflows.</p>
+                <div class="hero-buttons">
+                    <button onclick="navigateTo('docs.html')" class="btn btn-primary">
+                        Start Learning
+                        <span class="btn-arrow">→</span>
+                    </button>
+                    <button onclick="navigateTo('contact.html')" class="btn btn-secondary">Talk to an instructor</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="course-overview">
+            <div class="course-overview-grid">
+                <div class="glass-card course-intro-card">
+                    <h2 class="card-title">Master the Core of IT &amp; Cybersecurity</h2>
+                    <p class="card-desc">Track-based curricula combine video briefings, live diagrams, CLI walkthroughs, and automation scripts. Everything is production-aligned, versioned in GitHub, and synced to your Notion workspace for accountability.</p>
+                    <ul class="course-highlights">
+                        <li>Hands-on labs with downloadable configs</li>
+                        <li>Real-world scenarios mapped to enterprise tooling</li>
+                        <li>Structured assessments &amp; milestone reviews</li>
+                    </ul>
+                </div>
+                <div class="glass-card course-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">5</span>
+                        <span class="stat-label">Learning tracks</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">60+</span>
+                        <span class="stat-label">Guided modules</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">120+</span>
+                        <span class="stat-label">Hours of lab time</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">100%</span>
+                        <span class="stat-label">Documentation coverage</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="course-filters" aria-label="Course filters">
+            <div class="filters-header">
+                <h2 class="card-title">Find your next module</h2>
+                <p class="card-desc">Filter by difficulty, topic, or time commitment. Each course unlocks dedicated labs, automation templates, and reading lists.</p>
+            </div>
+            <div class="filters-grid">
+                <div class="filter-field search-field">
+                    <label for="course-search">Search catalog</label>
+                    <input id="course-search" type="search" class="form-control" placeholder="Search by title, topic, or tooling">
+                </div>
+                <div class="filter-field">
+                    <label for="difficulty-filter">Difficulty</label>
+                    <select id="difficulty-filter" class="form-control" data-course-filter>
+                        <option value="all">All</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+                <div class="filter-field">
+                    <label for="topic-filter">Topic</label>
+                    <select id="topic-filter" class="form-control" data-course-filter>
+                        <option value="all">All</option>
+                        <option value="networking">Networking Fundamentals</option>
+                        <option value="operating-systems">Operating Systems</option>
+                        <option value="cloud">Cloud Computing</option>
+                        <option value="security">Security</option>
+                        <option value="home-lab">Home Lab Setup</option>
+                    </select>
+                </div>
+                <div class="filter-field">
+                    <label for="duration-filter">Duration</label>
+                    <select id="duration-filter" class="form-control" data-course-filter>
+                        <option value="all">All</option>
+                        <option value="lt10">Under 10 hours</option>
+                        <option value="10-20">10–20 hours</option>
+                        <option value="gt20">20+ hours</option>
+                    </select>
+                </div>
+            </div>
+            <div class="filters-actions">
+                <button class="btn btn-secondary" id="reset-course-filters">Reset filters</button>
+            </div>
+        </section>
+
+        <section class="course-progress">
+            <div class="progress-header">
+                <h2 class="card-title">Track team progress</h2>
+                <p class="card-desc">See how your enrolled engineers are advancing through assigned tracks. Metrics sync automatically from the learning portal.</p>
+            </div>
+            <div class="progress-grid">
+                <div class="glass-card progress-card" data-progress="45">
+                    <div class="progress-card-header">
+                        <span class="progress-card-title">Networking Fundamentals</span>
+                        <span class="progress-value">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill"></div>
+                    </div>
+                    <ul class="progress-list">
+                        <li>9 modules • Beginner</li>
+                        <li>Lab hours logged: 14</li>
+                        <li>Next milestone: VLAN design lab</li>
+                    </ul>
+                </div>
+                <div class="glass-card progress-card" data-progress="62">
+                    <div class="progress-card-header">
+                        <span class="progress-card-title">Operating Systems</span>
+                        <span class="progress-value">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill"></div>
+                    </div>
+                    <ul class="progress-list">
+                        <li>12 modules • Intermediate</li>
+                        <li>Lab hours logged: 22</li>
+                        <li>Next milestone: AD automation runbook</li>
+                    </ul>
+                </div>
+                <div class="glass-card progress-card" data-progress="28">
+                    <div class="progress-card-header">
+                        <span class="progress-card-title">Security Operations</span>
+                        <span class="progress-value">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill"></div>
+                    </div>
+                    <ul class="progress-list">
+                        <li>15 modules • Advanced</li>
+                        <li>Lab hours logged: 11</li>
+                        <li>Next milestone: SOC24 purple team lab</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="course-catalog">
+            <div class="catalog-header">
+                <h2 class="card-title">Course catalog</h2>
+                <p class="card-desc">Every course includes module briefs, lab guides, CLI snippets, and integration steps into your existing tooling.</p>
+            </div>
+            <div class="course-grid">
+                <article class="glass-card course-card" data-difficulty="beginner" data-topic="networking" data-duration="lt10" data-keywords="network fundamentals ccna ip addressing wireshark packet tracer ospf vlan">
+                    <div class="course-icon">🌐</div>
+                    <h3 class="course-card-title">Networking Fundamentals Blueprint</h3>
+                    <p class="course-card-desc">Build resilient enterprise networks from the ground up with IP addressing, switching, and routing foundations.</p>
+                    <div class="course-meta">
+                        <span class="course-badge">9 modules</span>
+                        <span class="course-badge">Beginner</span>
+                        <span class="course-badge">8 hrs est.</span>
+                    </div>
+                    <ul class="course-point-list">
+                        <li>IP address planning, subnetting, VLAN segmentation</li>
+                        <li>Lab stack: Cisco Packet Tracer, pfSense, Wireshark</li>
+                        <li>Deliverable: LAN/WAN reference architecture</li>
+                    </ul>
+                    <div class="course-actions">
+                        <button class="btn btn-primary" onclick="navigateTo('docs-detail.html?slug=network-fundamentals')">View modules</button>
+                        <button class="btn btn-secondary" onclick="navigateTo('docs.html#networking-dns')">Explore docs</button>
+                    </div>
+                </article>
+                <article class="glass-card course-card" data-difficulty="intermediate" data-topic="operating-systems" data-duration="10-20" data-keywords="linux administration windows server ad powershell automation systemd netplan">
+                    <div class="course-icon">💻</div>
+                    <h3 class="course-card-title">Operating Systems Mastery</h3>
+                    <p class="course-card-desc">Deploy and harden Linux and Windows environments with scripting, identity, and service orchestration.</p>
+                    <div class="course-meta">
+                        <span class="course-badge">12 modules</span>
+                        <span class="course-badge">Intermediate</span>
+                        <span class="course-badge">16 hrs est.</span>
+                    </div>
+                    <ul class="course-point-list">
+                        <li>Linux automation with Bash, systemd, and Netplan</li>
+                        <li>Windows Server: AD DS, Group Policy, DNS, DHCP</li>
+                        <li>Deliverable: Hybrid OS operations runbook</li>
+                    </ul>
+                    <div class="course-actions">
+                        <button class="btn btn-primary" onclick="navigateTo('docs-detail.html?slug=linux-administration')">View modules</button>
+                        <button class="btn btn-secondary" onclick="navigateTo('docs.html#infrastructure-as-code')">Explore docs</button>
+                    </div>
+                </article>
+                <article class="glass-card course-card" data-difficulty="intermediate" data-topic="cloud" data-duration="10-20" data-keywords="cloud computing azure aws gcp landing zones iam automation">
+                    <div class="course-icon">☁️</div>
+                    <h3 class="course-card-title">Cloud Computing Accelerator</h3>
+                    <p class="course-card-desc">Design landing zones, automate provisioning, and secure workloads across Azure, AWS, and GCP.</p>
+                    <div class="course-meta">
+                        <span class="course-badge">14 modules</span>
+                        <span class="course-badge">Intermediate</span>
+                        <span class="course-badge">18 hrs est.</span>
+                    </div>
+                    <ul class="course-point-list">
+                        <li>Identity, networking, and policy blueprints for multi-cloud</li>
+                        <li>Hands-on IaC labs using Terraform &amp; Bicep</li>
+                        <li>Deliverable: Cloud operating model &amp; runbooks</li>
+                    </ul>
+                    <div class="course-actions">
+                        <button class="btn btn-primary" onclick="navigateTo('docs-detail.html?slug=azure-landing-zone')">View modules</button>
+                        <button class="btn btn-secondary" onclick="navigateTo('docs.html#deployment-guides')">Explore docs</button>
+                    </div>
+                </article>
+                <article class="glass-card course-card" data-difficulty="advanced" data-topic="security" data-duration="gt20" data-keywords="security operations soc zero trust incident response penetration testing compliance">
+                    <div class="course-icon">🔒</div>
+                    <h3 class="course-card-title">Security Operations &amp; Hardening</h3>
+                    <p class="course-card-desc">Protect infrastructure with zero-trust controls, threat detection, offensive testing, and compliance guardrails.</p>
+                    <div class="course-meta">
+                        <span class="course-badge">15 modules</span>
+                        <span class="course-badge">Advanced</span>
+                        <span class="course-badge">24 hrs est.</span>
+                    </div>
+                    <ul class="course-point-list">
+                        <li>Incident response, SOC workflows, and SIEM tuning</li>
+                        <li>Pen-testing labs (Nmap, Metasploit, CTF frameworks)</li>
+                        <li>Deliverable: Security operations and GRC playbook</li>
+                    </ul>
+                    <div class="course-actions">
+                        <button class="btn btn-primary" onclick="navigateTo('docs-detail.html?slug=cybersecurity-essentials')">View modules</button>
+                        <button class="btn btn-secondary" onclick="navigateTo('docs.html#security-hardening')">Explore docs</button>
+                    </div>
+                </article>
+                <article class="glass-card course-card" data-difficulty="beginner" data-topic="home-lab" data-duration="10-20" data-keywords="home lab proxmox vmware automation nas homelab network">
+                    <div class="course-icon">🏠</div>
+                    <h3 class="course-card-title">Home Lab Setup &amp; Automation</h3>
+                    <p class="course-card-desc">Build an enterprise-grade lab at home with Proxmox, pfSense, automation scripts, and observability pipelines.</p>
+                    <div class="course-meta">
+                        <span class="course-badge">11 modules</span>
+                        <span class="course-badge">Beginner</span>
+                        <span class="course-badge">12 hrs est.</span>
+                    </div>
+                    <ul class="course-point-list">
+                        <li>Hardware planning, virtualization clusters, and storage</li>
+                        <li>Automation with Ansible, GitHub Actions, and Terraform</li>
+                        <li>Deliverable: Fully instrumented home lab stack</li>
+                    </ul>
+                    <div class="course-actions">
+                        <button class="btn btn-primary" onclick="navigateTo('docs-detail.html?slug=virtualization-deployment')">View modules</button>
+                        <button class="btn btn-secondary" onclick="navigateTo('docs.html#backup-recovery')">Explore docs</button>
+                    </div>
+                </article>
+            </div>
+            <div class="empty-state" id="course-empty-state">
+                <div class="empty-icon">🔍</div>
+                <p class="card-desc">No courses match your current filters. Adjust the criteria to discover more tracks.</p>
+            </div>
+        </section>
+
+        <section class="course-cta">
+            <div class="glass-card course-cta-card">
+                <h2 class="card-title mb-3">Ship skills with confidence</h2>
+                <p class="card-desc mb-4">Every Dexterity.it course ties directly into the documentation hub, your Notion workspace, and GitHub automation repositories. Pick a track, sync the labs, and keep iterating.</p>
+                <div class="cta-actions">
+                    <button class="btn btn-primary" onclick="navigateTo('docs.html')">
+                        Browse documentation
+                        <span class="btn-arrow">→</span>
+                    </button>
+                    <button class="btn btn-secondary" onclick="navigateTo('contact.html')">Request team access</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3 class="footer-title gradient-text">DEXTERITY.IT</h3>
+                <p class="footer-copy">© <span id="year"></span> Muhannad Ataya. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="terms.html" class="footer-link">Terms</a>
+                <a href="privacy.html" class="footer-link">Privacy</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+                <a href="mailto:contact@dexterity.it" class="footer-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    contact@dexterity.it
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

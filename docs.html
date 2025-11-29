@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1220">
+    <meta name="description" content="DEXTERITY.IT Documentation Hub — guides, runbooks, and reference material for Networking, Cloud, Security, DevOps, and more.">
+    <title>Documentation Hub | DEXTERITY.IT</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <a href="/" class="logo-btn">
+                    <span class="logo-text">DEXTERITY.IT</span>
+                </a>
+                <div class="nav-links desktop-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="courses.html" class="nav-link">Courses</a>
+                    <a href="docs.html" class="nav-link active">Documentation</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-controls">
+                    <button class="mode-toggle nav-mode-toggle" type="button" data-theme-toggle aria-pressed="false">☀️ Light mode</button>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                        <span class="menu-icon">☰</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <div class="mobile-nav-links">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="services.html" class="mobile-nav-link">Services</a>
+                <a href="courses.html" class="mobile-nav-link">Courses</a>
+                <a href="docs.html" class="mobile-nav-link active">Documentation</a>
+                <a href="about.html" class="mobile-nav-link">About</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+            </div>
+            <button class="mode-toggle mobile-mode-toggle" type="button" data-theme-toggle aria-pressed="false">☀️ Light mode</button>
+        </div>
+    </nav>
+
+    <main id="main">
+        <div class="docs-hub-container">
+            <header class="docs-hub-header">
+                <div class="docs-hub-header-content">
+                    <div>
+                        <p class="docs-hub-brand">Dexterity</p>
+                        <h1 class="docs-hub-title">Find your answer by subject</h1>
+                    </div>
+                    <!-- The main theme toggle is now part of the standard nav bar -->
+                </div>
+                <div class="docs-hub-search-wrapper">
+                    <label for="docs-hub-search" class="sr-only">Search docs</label>
+                    <div class="search-input-wrapper">
+                        <span class="search-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        </span>
+                        <input id="docs-hub-search" type="text" class="form-control" placeholder="Search subjects, e.g., OSPF, AZ-900, systemd…">
+                    </div>
+                </div>
+            </header>
+
+            <div class="docs-hub-grid" id="docs-hub-grid">
+                <!-- Tiles will be dynamically filtered, so data attributes are added for JS -->
+                <a href="/docs/introduction" class="docs-hub-tile" data-keywords="introduction about dexterity docs how to use">
+                    <div class="docs-hub-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg></div>
+                    <div>
+                        <h3 class="docs-hub-tile-title">Introduction</h3>
+                        <p class="docs-hub-tile-desc">About Dexterity Docs & how to use it</p>
+                    </div>
+                </a>
+                <a href="/docs/installation" class="docs-hub-tile" data-keywords="installation install guides bare metal vms">
+                    <div class="docs-hub-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2H10a2 2 0 0 0-2 2v16"></path></svg></div>
+                    <div>
+                        <h3 class="docs-hub-tile-title">Installation</h3>
+                        <p class="docs-hub-tile-desc">Install guides for bare metal & VMs</p>
+                    </div>
+                </a>
+                <a href="/docs/networking" class="docs-hub-tile" data-keywords="networking ">
+                    <div class="docs-hub-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+                    <div>
+                        <h3 class="docs-hub-tile-title">Networking</h3>
+                        <p class="docs-hub-tile-desc">Cisco, VLANs, OSPF, PPP, IPv4/IPv6, DHCP</p>
+                    </div>
+                </a>
+                <a href="docs-detail.html?slug=ccna-configuration" class="docs-hub-tile" data-keywords="Cisco CCNA">
+                    <div class="docs-hub-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="8" rx="2"></rect><rect x="3" y="12" width="18" height="8" rx="2"></rect><line x1="7" y1="8" x2="7" y2="16"></line><line x1="17" y1="8" x2="17" y2="16"></line></svg></div>
+                    <div>
+                        <h3 class="docs-hub-tile-title">CCNA Configuration Labs</h3>
+                        <p class="docs-hub-tile-desc">Router & switch scenarios with ready configs</p>
+                    </div>
+                </a>
+                <a href="/docs/os" class="docs-hub-tile" data-keywords="operating systems linux windows wsl systemd shells">
+                    <div class="docs-hub-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></div>
+                    <div>
+                        <h3 class="docs-hub-tile-title">Operating Systems</h3>
+                        <p class="docs-hub-tile-desc">Linux, Windows, WSL, systemd, shells</p>
+                    </div>
+                </a>
+                <a href="/docs/security" class="docs-hub-tile" data-keywords="security blue team hardening tools labs">
+                    <div class="docs-hub-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+                    <div>
+                        <h3 class="docs-hub-tile-title">Security</h3>
+                        <p class="docs-hub-tile-desc">Blue team, hardening, tools, labs</p>
+                    </div>
+                </a>
+                <a href="/docs/virtualization" class="docs-hub-tile" data-keywords="virtualization vmware virtualbox hyper-v proxmox vagrant">
+                    <div class="docs-hub-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div>
+                    <div>
+                        <h3 class="docs-hub-tile-title">Virtualization</h3>
+                        <p class="docs-hub-tile-desc">VMware, VirtualBox, Hyper-V, Proxmox & Vagrant</p>
+                    </div>
+                </a>
+                <a href="/docs/cloud" class="docs-hub-tile" data-keywords="cloud basics ">
+                    <div class="docs-hub-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg></div>
+                    <div>
+                        <h3 class="docs-hub-tile-title">Cloud</h3>
+                        <p class="docs-hub-tile-desc">Azure (AZ-900), AWS basics, IaC</p>
+                    </div>
+                </a>
+                <a href="/docs/usb" class="docs-hub-tile" data-keywords="ISO">
+                    <div class="docs-hub-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 10v6"></path><path d="M10 12h4"></path><path d="M18 10V8A6 6 0 0 0 6 8v2h12Z"></path><path d="M6 14v-4"></path><path d="M18 14v-4"></path><path d="M14 10h2"></path><path d="M8 10h2"></path></svg></div>
+                    <div>
+                        <h3 class="docs-hub-tile-title">USB & Live Media</h3>
+                        <p class="docs-hub-tile-desc">Bootable USBs, imaging, troubleshooting</p>
+                    </div>
+                </a>
+                <a href="/docs/containers" class="docs-hub-tile" data-keywords="containers docker podman lxd lxc">
+                    <div class="docs-hub-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></div>
+                    <div>
+                        <h3 class="docs-hub-tile-title">Containers</h3>
+                        <p class="docs-hub-tile-desc">Docker, Podman, LXD/LXC</p>
+                    </div>
+                </a>
+                <a href="/docs/tools" class="docs-hub-tile" data-keywords="tools">
+                    <div class="docs-hub-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></div>
+                    <div>
+                        <h3 class="docs-hub-tile-title">Tools</h3>
+                        <p class="docs-hub-tile-desc">Kali tools, nmap, iperf3, Wireshark, pfSense</p>
+                    </div>
+                </a>
+                <a href="/docs/troubleshooting" class="docs-hub-tile" data-keywords="troubleshooting when things go wrong checklists fixes">
+                    <div class="docs-hub-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                    <div>
+                        <h3 class="docs-hub-tile-title">Troubleshooting</h3>
+                        <p class="docs-hub-tile-desc">When things go wrong — checklists & fixes</p>
+                    </div>
+                </a>
+                <a href="#labs-tree" class="docs-hub-tile" data-keywords="labs guides step-by-step replicate notion web">
+                    <div class="docs-hub-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg></div>
+                    <div>
+                        <h3 class="docs-hub-tile-title">Labs & Guides</h3>
+                        <p class="docs-hub-tile-desc">Step-by-step labs to replicate (Notion → Web)</p>
+                    </div>
+                </a>
+                <a href="/docs/dev" class="docs-hub-tile" data-keywords="dev scripting bash powershell python git">
+                    <div class="docs-hub-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0_0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg></div>
+                    <div>
+                        <h3 class="docs-hub-tile-title">Dev & Scripting</h3>
+                        <p class="docs-hub-tile-desc">Bash, PowerShell, Python, Git</p>
+                    </div>
+                </a>
+                <a href="/docs/general" class="docs-hub-tile" data-keywords="general use misc post-install tips notes">
+                    <div class="docs-hub-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 0 2l-.15.08a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.38a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1 0-2l.15-.08a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
+                    <div>
+                        <h3 class="docs-hub-tile-title">General Use</h3>
+                        <p class="docs-hub-tile-desc">Misc. post-install tips & notes</p>
+                    </div>
+                </a>
+                <a href="/docs/policy" class="docs-hub-tile" data-keywords="policy small print contribution guide">
+                    <div class="docs-hub-tile-icon"><svg xmlns="http://wwww3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></div>
+                    <div>
+                        <h3 class="docs-hub-tile-title">Policy</h3>
+                        <p class="docs-hub-tile-desc">The small print & contribution guide</p>
+                    </div>
+                </a>
+            </div>
+
+            <section id="labs-tree" class="docs-tree-section" data-collection-group="labs-tree">
+                <header class="docs-tree-header">
+                    <span class="docs-tree-eyebrow">Labs & Guides</span>
+                    <h2 class="docs-tree-title">Lab Collections</h2>
+                    <p class="docs-tree-desc">Browse hands-on guides by practice area with a nested tree layout, similar to a Linux filesystem.</p>
+                </header>
+                <div class="docs-tree">
+                    <details class="docs-tree-branch" open data-collection-group="labs-tree-networking">
+                        <summary class="docs-tree-branch-summary">
+                            <span class="docs-tree-branch-caret" aria-hidden="true"></span>
+                            <span class="docs-tree-branch-icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h5l2 2h9a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/></svg>
+                            </span>
+                            <span class="docs-tree-branch-label">Networking</span>
+                        </summary>
+                        <ul class="docs-tree-items">
+                            <li class="docs-tree-item">
+                                <a class="docs-tree-leaf" href="docs-detail.html?slug=frame-relay-lab" data-keywords="lab networking frame relay wan pvc dlci cisco notion">
+                                    <span class="docs-tree-leaf-icon" aria-hidden="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h7l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"></path><polyline points="13 2 13 8 19 8"></polyline></svg>
+                                    </span>
+                                    <span class="docs-tree-leaf-text">Frame Relay Configuration Lab</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </details>
+                </div>
+            </section>
+
+            <div id="docs-hub-empty-state" class="docs-hub-empty-state" style="display: none;">
+                No results. Try broader terms.
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3 class="footer-title gradient-text">DEXTERITY.IT</h3>
+                <p class="footer-copy">© <span id="year"></span> Muhannad Ataya. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="terms.html" class="footer-link">Terms</a>
+                <a href="privacy.html" class="footer-link">Privacy</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+                <a href="mailto:contact@dexterity.it" class="footer-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    contact@dexterity.it
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body> 
+</html>
